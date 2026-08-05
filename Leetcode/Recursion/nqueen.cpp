@@ -3,7 +3,6 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to solve N-Queens problem
     void solve(int col, vector<string>& board, int n,
                vector<int>& leftRow, vector<int>& upperDiagonal, vector<int>& lowerDiagonal,
                vector<vector<string>>& ans) {

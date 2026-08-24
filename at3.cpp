@@ -1,22 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    
     int n;
     cin>>n;
-    vector<int> arr;
+    vector<int> s;
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        cin>>s[i];
     }
-    for(int i=0;i<n;i++){
-        if(arr[i]>0 && n>0){
-            n-arr[i];
-        }
-    }
-    cout<<n;
-    return 0
+    int travel=0;
+    int i=0;
+  for(int i=0;i<n;i++){
+    int y=abs(travel-s[i]);
+
+  }
+   
+    
+    return 0;
 }

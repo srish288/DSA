@@ -2,21 +2,24 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
+   int t;
+   cin>>t;
+   while(t--){
     int n;
     cin>>n;
-    vector<int> s;
+    vector<int> arr(n);
     for(int i=0;i<n;i++){
-        cin>>s[i];
+      cin>>arr[i];
     }
-    int travel=0;
-    int i=0;
-  for(int i=0;i<n;i++){
-    int y=abs(travel-s[i]);
+    if(n==1){
+      cout<<arr[0]<<"\n";
 
-  }
+    }
+    else{
+      cout<<__gcd(arr[0],arr[n-1])<<"\n";
+    }
+   }
+   
    
     
     return 0;

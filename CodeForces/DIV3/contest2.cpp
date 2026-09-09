@@ -6,26 +6,29 @@ int main() {
    cin>>t;
    while(t--){
     int n;
+    cin>>n;
    vector<long long> arr(n);
-   int ev2=0,ev1=0,odd=0;
-     int freq=0;
-    unordered_map<long long,int> f;
     for(int i=0;i<n;i++){
-        cin>>arr[i];
-    
-        f[arr[i]]++;   
-     if(arr[i]%2==1){
+          cin>>arr[i];
+    }
+    int ev2=0,ev1=0,odd=0;
+    unordered_map<long long,int> f;
+    for(long long a:arr){
+        f[a]++;   
+    }
+    int freq=0;
+    for(auto a:f){
+        freq=max(freq,a.second);
+    }
+    for(long long a:arr){
+        if(a%2==1){
             odd++;
         }
         else{ 
-            if(arr[i]%4==0) ev1++;
+            if(a%4==0) ev1++;
              else ev2++;
         }
     }
-  
-    for(auto a:f){
-        freq=max(freq,a.second);
-    }  
     freq=max(freq,odd);
     freq=max(freq,ev1);
     freq=max(freq,ev2);
